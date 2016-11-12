@@ -1,2 +1,4 @@
 # code-mesh
-Azure web app
+View the web application at http://codemesh.azurewebsites.net
+
+

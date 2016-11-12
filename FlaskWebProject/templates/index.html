@@ -7,17 +7,81 @@
         <!--all other head content below-->
         <title>Code Mesh</title>
 
-        <!--css files-->
+        <!--bootstrap CSS files-->
+        <link href="{{ url_for('static', filename='lib/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='lib/css/jumbotron.css') }}" rel="stylesheet">
+
+        <!--custom CSS files-->
         <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div id="editor">function foo(items) {
-            var x = "All this is syntax highlighted";
-            return x;
-        }</div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Code Mesh</a>
+                </div><!--/.navbar-header-->
+                <div id="navbar" class="navbar-collapse collapse">
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" placeholder="Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-success">Sign in</button>
+                    </form>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </nav>
 
-        <script src = "{{ url_for('static', filename='lib/ace-builds/src/ace.js') }}"></script>
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Coding + Collaboration</h1>
+                <p>Work with others and edit your code, anytime, anywhere.</p>
+                <p><a class="btn btn-primary btn-lg" href="/signup" role="button">Sign up &raquo;</a></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+
+            <hr>
+
+            <footer>
+                <p>&copy; 2016 Code Mesh, Vanessa Tan</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!--javascript files below-->
+        <!--library files-->
         <script src = "{{ url_for('static', filename='lib/js/jquery.min.js') }}"></script>
+        <script src = "{{ url_for('static', filename='lib/js/bootstrap.min.js') }}"></script>
+
+        <!--custom files-->
         <script src = "{{ url_for('static', filename='js/script.js') }}"></script>
     </body>
 </html>
